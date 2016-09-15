@@ -1,0 +1,23 @@
+<div>
+
+<ul>
+  <li ng-repeat="item in customers">
+    {{ item.name | MUpperCase }}
+  </li>
+</ul>
+
+<ul>
+  <li ng-repeat="item in customers | StartsWithD">
+    {{ item.name }}
+  </li>
+</ul>
+
+
+<input type="text" ng-model="startswith">
+<ul>
+  <li ng-repeat="item in customers | StartsWithLetter:startswith">
+    {{ item.name }}
+  </li>
+</ul>
+
+</div>
